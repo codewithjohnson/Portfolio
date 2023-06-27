@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Logo from "../logo/Logo";
 import { NavLink } from "react-router-dom";
+import Contact from "../contact/Contact";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,40 +23,71 @@ const Header = () => {
   }, [isMenuOpen]);
 
   // close menu when outside is clicked
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setIsMenuOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isMenuOpen]);
+  // useEffect(() => {
+  //   const handleClickOutside = (e: MouseEvent) => {};
+
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => document.removeEventListener("mousedown", handleClickOutside);
+  // }, [isMenuOpen]);
 
   return (
-    <nav className="sticky z-50 flex h-[60px] items-center justify-between w-full header bg-gray-200">
+    <nav className="z-50 header h-[80px] sticky top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40 ">
       <Logo />
-
-      <button onClick={handleMenuToggle} className={`md:hidden flex p-2`}>
-        menu
-      </button>
 
       <ul
         ref={menuRef}
-        className={`flex w-full md:flex-row md:w-fit md:static gap-6 justify-between flex-col fixed -z-50 transition-all ease-in-out delay-100  ${
-          isMenuOpen ? "top-[60px]" : "-top-full"
-        }`}
+        className={`fixed md:static flex-col flex md:w-full md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
+      ${isMenuOpen ? "w-full  top-[80px]" : "-top-[400px]"}
+      `}
       >
-        <NavLink className={"w-full "} to="home">
-          contact
+        <NavLink className={"py-2 hover:text-secondary"} to="#">
+          home
         </NavLink>
-        <NavLink className={"w-full"} to="#projects">
+        <NavLink className={" py-2 hover:text-secondary"} to="#projects">
           projects
         </NavLink>
-        <NavLink className={"w-full"} to="#projects">
-          projects
+        <NavLink className={"hover:text-secondary py-2"} to="#about">
+          about
+        </NavLink>
+        <NavLink className={"py-2 hover:text-secondary"} to="#contact">
+          Contact
+        </NavLink>
+        <NavLink
+          className={
+            " py-2 rounded-3xl px-5 border border-secondary text-center"
+          }
+          to=""
+        >
+          dowload CV
         </NavLink>
       </ul>
+
+      <button onClick={handleMenuToggle} className={`inline-flex md:hidden`}>
+        <svg
+          className="w-6 h-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          {isMenuOpen ? (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          ) : (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          )}
+        </svg>
+      </button>
     </nav>
   );
 };

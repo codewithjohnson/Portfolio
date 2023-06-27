@@ -4,8 +4,9 @@ type Props = {};
 
 const Logo = (props: Props) => {
   return (
-    <p className="text-4xl font-extrabold text-gray-300">
-      M <span>J</span>
+    <p className="w-full font-extrabold text-white select-none md:text-3xl font-raleway">
+      <span className="text-secondary ">Muyiwa</span>
+      {""}. J
     </p>
   );
 };
