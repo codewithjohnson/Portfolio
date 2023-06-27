@@ -41,8 +41,8 @@ const Header = () => {
 
   return (
     <nav
-      className={`z-50 transition-none delay-150 ease-in-out header h-[80px] sticky top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40
-      ${isScrolled ? "bg-[#2B2D33]/40" : "bg-primary"}
+      className={`z-50 transition-none delay-150 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40
+      ${isScrolled ? "bg-[#2B2D33]/60" : "bg-primary"}
        `}
     >
       <Logo />
@@ -53,16 +53,16 @@ const Header = () => {
       ${isMenuOpen ? "w-full  top-[80px]" : "-top-[400px]"}
       `}
       >
-        <NavLink className={"py-2 hover:text-secondary"} to="#">
+        <NavLink className={"py-3 hover:text-secondary"} to="#">
           home
         </NavLink>
-        <NavLink className={" py-2 hover:text-secondary"} to="#projects">
+        <NavLink className={" py-3 hover:text-secondary"} to="#projects">
           projects
         </NavLink>
-        <NavLink className={"hover:text-secondary py-2"} to="#about">
+        <NavLink className={"hover:text-secondary py-3"} to="#about">
           about
         </NavLink>
-        <NavLink className={"py-2 hover:text-secondary"} to="#contact">
+        <NavLink className={"py-3 hover:text-secondary"} to="#contact">
           Contact
         </NavLink>
         <NavLink
@@ -75,7 +75,10 @@ const Header = () => {
         </NavLink>
       </ul>
 
-      <button onClick={handleMenuToggle} className={`inline-flex md:hidden text-white text-lg`}>
+      <button
+        onClick={handleMenuToggle}
+        className={`inline-flex md:hidden text-white text-lg`}
+      >
         <svg
           className="w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"

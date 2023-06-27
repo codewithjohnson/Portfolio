@@ -7,6 +7,7 @@ export default {
         spartan: ["Spartan", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
         openSans: ["Open Sans", "sans-serif"],
+        jost: ["Jost", "sans-serif"],
       },
       colors: {
         primary: {
