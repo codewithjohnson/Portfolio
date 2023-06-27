@@ -4,7 +4,7 @@ type Props = {};
 
 const Logo = (props: Props) => {
   return (
-    <p className="w-full font-extrabold text-white select-none md:text-3xl font-raleway">
+    <p className="w-full text-3xl font-extrabold text-white select-none font-raleway animate-bounce">
       <span className="text-secondary ">Muyiwa</span>
       {""}. J
     </p>

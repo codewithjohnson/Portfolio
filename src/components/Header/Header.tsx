@@ -1,15 +1,32 @@
 import React, { useEffect, useState, useRef } from "react";
 import Logo from "../logo/Logo";
 import { NavLink } from "react-router-dom";
-import Contact from "../contact/Contact";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLUListElement>(null);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      console.log(scrollPosition);
+      if (scrollPosition > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const navBarLimit = window.matchMedia("(min-width: 768px)");
@@ -22,21 +39,17 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
-  // close menu when outside is clicked
-  // useEffect(() => {
-  //   const handleClickOutside = (e: MouseEvent) => {};
-
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => document.removeEventListener("mousedown", handleClickOutside);
-  // }, [isMenuOpen]);
-
   return (
-    <nav className="z-50 header h-[80px] sticky top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40 ">
+    <nav
+      className={`z-50 transition-none delay-150 ease-in-out header h-[80px] sticky top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40
+      ${isScrolled ? "bg-[#2B2D33]/40" : "bg-primary"}
+       `}
+    >
       <Logo />
 
       <ul
         ref={menuRef}
-        className={`fixed md:static flex-col flex md:w-full md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
+        className={`fixed md:static flex-col text-sm flex md:w-full md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
       ${isMenuOpen ? "w-full  top-[80px]" : "-top-[400px]"}
       `}
       >
@@ -54,7 +67,7 @@ const Header = () => {
         </NavLink>
         <NavLink
           className={
-            " py-2 rounded-3xl px-5 border border-secondary text-center"
+            " py-2 rounded-3xl px-5 border-2 border-secondary text-center"
           }
           to=""
         >
@@ -62,11 +75,11 @@ const Header = () => {
         </NavLink>
       </ul>
 
-      <button onClick={handleMenuToggle} className={`inline-flex md:hidden`}>
+      <button onClick={handleMenuToggle} className={`inline-flex md:hidden text-white text-lg`}>
         <svg
           className="w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          fill="#ffffff"
           viewBox="0 0 24 24"
           stroke="currentColor"
           aria-hidden="true"
