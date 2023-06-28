@@ -46,18 +46,6 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
-  useEffect(() => {
-    const scrollPosition = window.scrollY;
-    const threshold = 200;
-    const contactElement = document.getElementById("contact") as HTMLElement;
-    if (
-      contactElement &&
-      scrollPosition >= contactElement.offsetTop - threshold
-    ) {
-      console.log("contact");
-    }
-  }, [location]);
-
   return (
     <nav
       className={`z-50 bg-primary transition-all duration-200 delay-200 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-8  xl:px-40
