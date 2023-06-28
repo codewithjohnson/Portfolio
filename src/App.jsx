@@ -1,4 +1,3 @@
-import { ScrollRestoration } from "react-router-dom";
 import MainLayout from "./layouts/mainLayout";
 import About from "./components/About/About";
 import Hero from "./components/hero/Hero";
@@ -16,7 +15,6 @@ const App = () => {
         <Projects />
         <Contact />
       </MainLayout>
-      <ScrollRestoration />
     </div>
   );
 };

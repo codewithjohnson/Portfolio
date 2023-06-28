@@ -20,7 +20,7 @@ const Contact = () => {
         transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
     >
-      <div className="w-full px-10 py-16 xl:px-40">
+      <div className="w-full px-5 py-16 xl:px-40">
         {/* heading */}
         <h1 className="pb-8 mx-auto text-3xl text-center text-white capitalize border-b-4 md:text-5xl font-jost border-b-yellow-500/50 w-fit">
           contact details 😊
@@ -35,7 +35,7 @@ const Contact = () => {
             </h1>
 
             {/* introduction */}
-            <p className="text-base leading-[26px] text-gray-200 md:pr-32 py-4 font-openSans pr-8 ">
+            <p className="text-base leading-[26px] text-gray-200 md:pr-32 py-4 font-openSans ">
               Connect with me for <span className="text-green-500">jobs</span>,
               inquiries, <span className="text-yellow-500">collaborations</span>
               , or any assistance. I'm just a message away.

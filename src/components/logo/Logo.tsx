@@ -9,7 +9,7 @@ const Logo = () => {
     <Link
       to="#home"
       onClick={(e) => handleSmoothScroll(e, "#home")}
-      className="w-full text-3xl font-extrabold text-white font-raleway xl:animated-bounce"
+      className="w-full text-2xl font-extrabold text-white lg:text-3xl font-raleway xl:animated-bounce"
     >
       <span className="text-secondary ">Muyiwa</span>
       {""}. J
