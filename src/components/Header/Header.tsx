@@ -64,7 +64,7 @@ const Header = () => {
       ${isMenuOpen ? "w-full  top-[80px]" : "-top-[400px]"}
       `}
       >
-        <NavLink className={"py-3 hover:text-secondary"} to="#">
+        <NavLink className={"py-3 hover:text-secondary"} to="#home" onClick={(e) => handleSmoothScroll(e, "#home")}>
           home
         </NavLink>
         <NavLink
