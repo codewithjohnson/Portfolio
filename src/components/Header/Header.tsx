@@ -69,7 +69,11 @@ const Header = () => {
       <ul
         ref={menuRef}
         className={`fixed md:static md:top-0 flex-col text-sm flex md:w-full md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
-      ${isMenuOpen ? " bg-primary/80 top-[80px]" : "-top-[400px]"}`}
+      ${
+        isMenuOpen
+          ? "w-full bg-primary/80 top-[80px] left-0 px-8"
+          : "-top-[400px]"
+      }`}
       >
         <NavLink
           className={
