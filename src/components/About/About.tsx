@@ -28,7 +28,7 @@ const About = () => {
 
         {/* right */}
         <div className="w-full md:px-5 right">
-          <div className="text-lg leading-[40px] text-gray-300 font-jost">
+          <div className="text-lg leading-7 font-light md:leading-[40px] text-gray-300 font-jost">
             <p>
               Hi, I'm{" "}
               <span className="font-medium text-green-500">

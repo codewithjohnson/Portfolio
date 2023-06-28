@@ -31,7 +31,7 @@ const HeroText = () => {
       </p>
 
       {/* buttons */}
-      <div className="flex flex-row items-center justify-center w-full gap-20 pt-6 font-openSans md:justify-start">
+      <div className="flex flex-row items-center justify-center w-full pt-6 gap-x-8 md:gap-20 font-openSans md:justify-start">
         <Link
           onClick={(e) => handleSmoothScroll(e, "#about")}
           to="#about"
