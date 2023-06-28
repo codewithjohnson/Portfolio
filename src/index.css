@@ -4,7 +4,8 @@
 
 @layer base {
   html {
-    @apply bg-primary;
+    scroll-behavior: smooth;
+    background-color: #3e4454;
   }
   .header {
     grid-area: header;

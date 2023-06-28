@@ -4,7 +4,7 @@ type Props = {};
 
 const About = () => {
   return (
-    <div className="w-full bg-[#2B2D33]">
+    <div id="about" className="w-full bg-[#2B2D33]">
       <div className="flex flex-col justify-between w-full gap-10 px-5 py-16 md:py-20 xl:px-40 md:flex-row">
         {/* left */}
         <div className="md:w-[20%]  w-full">
@@ -37,7 +37,11 @@ const About = () => {
               like to discuss, please feel free to reach out to me.
             </p>
 
-            <p></p>
+            <p>
+              <span className="text-secondary">Current Skills: </span>
+              HTML, CSS, React, Typescript, Nextjs, Bootstrap, Tailwind, Nodejs,
+              Express, Firebase, Git, Github, Figma
+            </p>
           </p>
         </div>
       </div>

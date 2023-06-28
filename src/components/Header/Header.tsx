@@ -39,6 +39,17 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
+  const handleSmoothScroll = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ): void => {
+    event.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       className={`z-50 transition-none delay-150 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40
@@ -56,13 +67,25 @@ const Header = () => {
         <NavLink className={"py-3 hover:text-secondary"} to="#">
           home
         </NavLink>
-        <NavLink className={" py-3 hover:text-secondary"} to="#projects">
+        <NavLink
+          className={" py-3 hover:text-secondary"}
+          to="#projects"
+          onClick={(e) => handleSmoothScroll(e, "#projects")}
+        >
           projects
         </NavLink>
-        <NavLink className={"hover:text-secondary py-3"} to="#about">
+        <NavLink
+          className={"hover:text-secondary py-3"}
+          to="#about"
+          onClick={(e) => handleSmoothScroll(e, "#about")}
+        >
           about
         </NavLink>
-        <NavLink className={"py-3 hover:text-secondary"} to="/#contact">
+        <NavLink
+          className={"py-3 hover:text-secondary"}
+          to="#contact"
+          onClick={(e) => handleSmoothScroll(e, "#contact")}
+        >
           Contact
         </NavLink>
         <NavLink
