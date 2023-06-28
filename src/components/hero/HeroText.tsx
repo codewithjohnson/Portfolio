@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
 import { handleSmoothScroll } from "./funcs";
 
-type Props = {};
 
-const HeroText = (props: Props) => {
+
+const HeroText = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full px-12 pt-5 md:pt-0 md:px-0">
+    <div className="flex flex-col items-center justify-center w-full px-6 pt-5 md:pt-0 md:px-0">
       {/* greeting text */}
       <p className="w-full py-1 text-2xl font-medium text-center text-secondary md:text-left">
         Hello, I'm

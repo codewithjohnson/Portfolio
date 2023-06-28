@@ -27,15 +27,15 @@ const Contact = () => {
         </h1>
 
         {/* contact details */}
-        <div className="flex flex-col justify-between mt-10 md:mt-20 md:flex-row gap-y-10">
+        <div className="flex flex-col justify-between mt-10 md:mt-20 md:flex-row gap-y-20">
           {/* left */}
           <div className="w-full ">
-            <h1 className="pb-6 text-2xl capitalize border-b-2 text-secondary font-jost border-b-gray-400 w-fit">
+            <h1 className="pb-3 text-2xl capitalize border-b-2 text-secondary font-jost border-b-gray-600 w-fit">
               Find Me
             </h1>
 
             {/* introduction */}
-            <p className="text-base leading-[26px] text-gray-200 md:pr-32 py-8 font-openSans pr-12 ">
+            <p className="text-base leading-[26px] text-gray-200 md:pr-32 py-4 font-openSans pr-8 ">
               Connect with me for <span className="text-green-500">jobs</span>,
               inquiries, <span className="text-yellow-500">collaborations</span>
               , or any assistance. I'm just a message away.

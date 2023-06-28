@@ -60,7 +60,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`z-50 bg-primary transition-all duration-200 delay-200 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40
+      className={`z-50 bg-primary transition-all duration-200 delay-200 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-8  xl:px-40
       ${isScrolled ? "bg-[#2B2D33]/80" : "bg-primary"}
        `}
     >
