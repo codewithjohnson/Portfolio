@@ -8,7 +8,7 @@ import Contact from "./components/contact/Contact";
 
 const App = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <MainLayout>
         <Hero />
         <About />
