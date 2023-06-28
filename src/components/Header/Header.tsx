@@ -1,25 +1,31 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import { useInView } from "framer-motion";
 import Logo from "../logo/Logo";
 import { NavLink } from "react-router-dom";
+import { handleSmoothScroll } from "../hero/funcs";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const menuRef = useRef<HTMLUListElement>(null);
+  const [isCurrentRoute, setIsCurrentRoute] = useState({
+    home: false,
+    projects: false,
+    about: false,
+    contact: false,
+  });
 
+  const location = useLocation();
+  const menuRef = useRef<HTMLUListElement>(null);
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // close menu when a link is clicked
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      console.log(scrollPosition);
-      if (scrollPosition > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      scrollPosition > 0 ? setIsScrolled(true) : setIsScrolled(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,6 +34,7 @@ const Header = () => {
     };
   }, []);
 
+  // change nav bg color on scroll
   useEffect(() => {
     const navBarLimit = window.matchMedia("(min-width: 768px)");
     const handleResize = () => {
@@ -39,63 +46,67 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
-  const handleSmoothScroll = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    id: string
-  ): void => {
-    event.preventDefault();
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    const scrollPosition = window.scrollY;
+    const threshold = 200;
+    const contactElement = document.getElementById("contact") as HTMLElement;
+    if (
+      contactElement &&
+      scrollPosition >= contactElement.offsetTop - threshold
+    ) {
+      console.log("contact");
     }
-  };
+  }, [location]);
 
   return (
     <nav
-      className={`z-50 transition-none delay-150 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40
-      ${isScrolled ? "bg-[#2B2D33]/60" : "bg-primary"}
+      className={`z-50 bg-primary transition-all duration-200 delay-200 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-5  xl:px-40
+      ${isScrolled ? "bg-[#2B2D33]/80" : "bg-primary"}
        `}
     >
       <Logo />
 
       <ul
         ref={menuRef}
-        className={`fixed md:static flex-col text-sm flex md:w-full md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
-      ${isMenuOpen ? "w-full  top-[80px]" : "-top-[400px]"}
-      `}
+        className={`fixed md:static md:top-0 flex-col text-sm flex md:w-full md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
+      ${isMenuOpen ? " bg-primary/80 top-[80px]" : "-top-[400px]"}`}
       >
         <NavLink
-          className={"py-3 hover:text-secondary"}
+          className={
+            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-500 text-white"
+          }
           to="#home"
           onClick={(e) => handleSmoothScroll(e, "#home")}
         >
           home
         </NavLink>
         <NavLink
-          className={" py-3 hover:text-secondary"}
+          className={`py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-500 text-white `}
           to="#projects"
           onClick={(e) => handleSmoothScroll(e, "#projects")}
         >
           projects
         </NavLink>
         <NavLink
-          className={"hover:text-secondary py-3"}
+          className={
+            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-500 text-white"
+          }
           to="#about"
           onClick={(e) => handleSmoothScroll(e, "#about")}
         >
           about
         </NavLink>
         <NavLink
-          className={"py-3 hover:text-secondary"}
+          className={
+            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-500 text-white "
+          }
           to="#contact"
           onClick={(e) => handleSmoothScroll(e, "#contact")}
         >
           Contact
         </NavLink>
         <a
-          className={
-            " py-2 rounded-3xl px-5 border-2 border-secondary text-center"
-          }
+          className={` py-2 rounded-3xl px-5 border-2 border-secondary text-center  hover:bg-black bg-primary transition-all duration-200 ease-in-out delay-100`}
           target="_blank"
           href="https://drive.google.com/file/d/1t6QFZHgrwgBUaGVfbVgFQUiFzGJ2knrI/view?usp=drive_link"
         >

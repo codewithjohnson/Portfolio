@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { SlLocationPin, SlCallIn } from "react-icons/sl";
 import { MdOutlineEmail } from "react-icons/md";
-
-type Props = {};
+import { useInView } from "framer-motion";
 
 const Contact = () => {
+  const contactRef = useRef(null);
+  const isInView = useInView(contactRef, {
+    once: false,
+  });
+
   return (
-    <div id="contact" className="w-full bg-[#2B2D33]">
+    <div
+      ref={contactRef}
+      id="contact"
+      className="w-full bg-[#2B2D33]"
+      style={{
+        transform: isInView ? "none" : "translateY(150px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
+    >
       <div className="w-full px-10 py-16 xl:px-40">
         {/* heading */}
         <h1 className="pb-8 mx-auto text-3xl text-center text-white capitalize border-b-4 md:text-5xl font-jost border-b-yellow-500/50 w-fit">
@@ -66,7 +80,7 @@ const Contact = () => {
             {/* form */}
             <form className="flex flex-col w-full gap-5">
               {/* name and email */}
-              <div className="flex flex-row items-center justify-start w-full gap-8 pt-5">
+              <div className="flex flex-col items-center justify-start w-full gap-8 pt-5 md:flex-row">
                 {/* name */}
                 <div className="flex flex-col w-full gap-2">
                   <label htmlFor="name" className="text-base text-gray-200">
@@ -97,7 +111,7 @@ const Contact = () => {
               </div>
 
               {/* phone and subject */}
-              <div className="flex flex-row items-center justify-start w-full gap-8 pt-5">
+              <div className="flex flex-col items-center justify-start w-full gap-8 pt-5 md:flex-row">
                 {/* phone */}
                 <div className="flex flex-col w-full gap-2">
                   <label htmlFor="phone" className="text-base text-gray-200">

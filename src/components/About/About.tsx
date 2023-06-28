@@ -1,10 +1,23 @@
-import React from "react";
-
-type Props = {};
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const About = () => {
+  const aboutRef = useRef(null);
+  const isInView = useInView(aboutRef, {
+    once: true,
+  });
+
   return (
-    <div id="about" className="w-full bg-[#2B2D33]">
+    <div
+      ref={aboutRef}
+      id="about"
+      className="w-full bg-[#2B2D33]"
+      style={{
+        transform: isInView ? "none" : "translateY(100px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
+    >
       <div className="flex flex-col justify-between w-full gap-10 px-5 py-16 md:py-20 xl:px-40 md:flex-row">
         {/* left */}
         <div className="md:w-[20%]  w-full">
@@ -37,10 +50,10 @@ const About = () => {
               like to discuss, please feel free to reach out to me.
             </p>
 
-            <p>
+            <p className="py-3">
               <span className="text-secondary">Current Skills: </span>
-              HTML, CSS, React, Typescript, Nextjs, Bootstrap, Tailwind, Nodejs,
-              Express, Firebase, Git, Github, Figma
+              HTML, CSS, SCSS, React, Typescript, APIs, Nextjs, Bootstrap,
+              Tailwind, Nodejs, Express, Firebase, Git, Github, Figma
             </p>
           </p>
         </div>

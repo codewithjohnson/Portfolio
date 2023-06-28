@@ -1,13 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { handleSmoothScroll } from "../hero/funcs";
 
 type Props = {};
 
 const Logo = (props: Props) => {
   return (
-    <p className="w-full text-3xl font-extrabold text-white select-none font-raleway animated-bounce">
+    <Link
+      to="#home"
+      onClick={(e) => handleSmoothScroll(e, "#home")}
+      className="w-full text-3xl font-extrabold text-white font-raleway animated-bounce"
+    >
       <span className="text-secondary ">Muyiwa</span>
       {""}. J
-    </p>
+    </Link>
   );
 };
 

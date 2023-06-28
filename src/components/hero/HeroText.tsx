@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
+import { handleSmoothScroll } from "./funcs";
 
 type Props = {};
 
@@ -32,6 +33,7 @@ const HeroText = (props: Props) => {
       {/* buttons */}
       <div className="flex flex-row items-center w-full gap-20 pt-6 font-openSans ">
         <Link
+          onClick={(e) => handleSmoothScroll(e, "#about")}
           to="#about"
           className="px-10 py-3 text-sm font-semibold text-white capitalize rounded-full bg-gradient-to-r from-secondary to-secondary/80 hover:bg-gradient-to-r hover:from-[#1FBE59] hover:to-[#F0C45C] transition-all  duration-300 ease-in-out"
         >
