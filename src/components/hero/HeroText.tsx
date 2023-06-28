@@ -19,7 +19,7 @@ const HeroText = () => {
       </h1>
 
       {/* description */}
-      <p className="w-full py-3 text-lg font-medium text-center text-white capitalize font-openSans md:text-left">
+      <p className="w-full py-3 text-sm text-center text-white capitalize md:text-lg font-openSans md:text-left">
         an <span className=" glow-animation">Agile Javascript</span> developer
         from <span className="text-[#F0C45C]">Nigeria.</span>
       </p>

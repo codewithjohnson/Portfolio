@@ -9,7 +9,7 @@ type Props = {};
 const Hero = () => {
   return (
     <div className="relative w-full bg-primary">
-      <div className="flex flex-col-reverse justify-between py-16 md:flex-row xl:px-40">
+      <div className="flex flex-col-reverse justify-between py-16 gap-y-20 md:flex-row xl:px-40">
         <HeroText />
 
         {/* hero image */}
@@ -17,7 +17,7 @@ const Hero = () => {
           <img
             src="../../../public/assets/hero.png"
             alt="hero"
-            className="w-[60%] mx-auto h-[60%] md:w-full md:h-full hover:brightness-100 hover:animate-pulse"
+            className="w-[60%] mx-auto h-[60%] md:w-full md:h-full hover:brightness-100 xl:hover:animate-pulse"
           />
           <DiJavascript1
             title="JavaScript"
