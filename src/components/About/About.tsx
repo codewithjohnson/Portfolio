@@ -21,14 +21,14 @@ const About = () => {
       <div className="flex flex-col justify-between w-full gap-10 px-5 py-16 md:py-20 xl:px-40 md:flex-row">
         {/* left */}
         <div className="md:w-[20%]  w-full">
-          <h1 className="text-4xl text-left text-white uppercase font-openSans">
+          <h1 className="text-4xl text-left text-white uppercase font-jost">
             About Me
           </h1>
         </div>
 
         {/* right */}
-        <div className="w-full bg-black/5 md:px-5 right">
-          <p className="text-xl font-light leading-[40px] text-gray-200 font-openSans  ">
+        <div className="w-full md:px-5 right">
+          <div className="text-lg leading-[40px] text-gray-300 font-jost">
             <p>
               Hi, I'm{" "}
               <span className="font-medium text-green-500">
@@ -55,7 +55,7 @@ const About = () => {
               HTML, CSS, SCSS, React, Typescript, APIs, Nextjs, Bootstrap,
               Tailwind, Nodejs, Express, Firebase, Git, Github, Figma
             </p>
-          </p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import React, { useRef } from "react";
 import { SlLocationPin, SlCallIn } from "react-icons/sl";
 import { MdOutlineEmail } from "react-icons/md";
 import { useInView } from "framer-motion";
