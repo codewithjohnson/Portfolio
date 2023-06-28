@@ -6,7 +6,7 @@ import { useInView } from "framer-motion";
 const Contact = () => {
   const contactRef = useRef(null);
   const isInView = useInView(contactRef, {
-    once: false,
+    once: true,
   });
 
   return (

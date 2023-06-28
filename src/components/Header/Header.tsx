@@ -68,16 +68,12 @@ const Header = () => {
 
       <ul
         ref={menuRef}
-        className={`fixed md:static md:top-0 flex-col text-sm flex md:w-full md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
-      ${
-        isMenuOpen
-          ? "w-full bg-primary/80 top-[80px] left-0 px-8"
-          : "-top-[400px]"
-      }`}
+        className={`fixed left-0 right-0  w-full md:static md:top-0 flex-col text-sm flex md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
+      ${isMenuOpen ? " bg-primary/80 top-[80px]  px-8 " : "hidden md:flex"}`}
       >
         <NavLink
           className={
-            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-500 text-white"
+            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-300 text-white"
           }
           to="#home"
           onClick={(e) => handleSmoothScroll(e, "#home")}
@@ -85,7 +81,7 @@ const Header = () => {
           home
         </NavLink>
         <NavLink
-          className={`py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-500 text-white `}
+          className={`py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-300 text-white `}
           to="#projects"
           onClick={(e) => handleSmoothScroll(e, "#projects")}
         >
@@ -93,7 +89,7 @@ const Header = () => {
         </NavLink>
         <NavLink
           className={
-            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-500 text-white"
+            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-300 text-white"
           }
           to="#about"
           onClick={(e) => handleSmoothScroll(e, "#about")}
@@ -102,7 +98,7 @@ const Header = () => {
         </NavLink>
         <NavLink
           className={
-            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-500 text-white "
+            "py-3 hover:text-secondary transition-all delay-150 ease-in-out duration-300 text-white "
           }
           to="#contact"
           onClick={(e) => handleSmoothScroll(e, "#contact")}
