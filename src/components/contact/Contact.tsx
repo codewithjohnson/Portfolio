@@ -20,9 +20,9 @@ const Contact = () => {
         transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
     >
-      <div className="w-full px-5 py-16 xl:px-40">
+      <div className="w-full py-16 px-7 xl:px-40">
         {/* heading */}
-        <h1 className="pb-8 mx-auto text-3xl text-center text-white capitalize border-b-4 md:text-5xl font-jost border-b-yellow-500/50 w-fit">
+        <h1 className="pb-8 mx-auto text-3xl text-left text-white capitalize border-b-4 md:text-5xl font-jost border-b-yellow-500/20 md:w-fit">
           contact details 😊
         </h1>
 
