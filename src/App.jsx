@@ -7,7 +7,7 @@ import Contact from "./components/contact/Contact";
 
 const App = () => {
   return (
-    <>
+    <div className="relative">
       <MainLayout>
         <Hero />
         <About />
@@ -15,7 +15,7 @@ const App = () => {
         {/* <Projects /> */}
         <Contact />
       </MainLayout>
-    </>
+    </div>
   );
 };
 

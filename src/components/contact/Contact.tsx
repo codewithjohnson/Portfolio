@@ -6,7 +6,7 @@ type Props = {};
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full h-full bg-[#2B2D33]">
+    <div id="contact" className="w-full bg-[#2B2D33]">
       <div className="w-full px-10 py-16 xl:px-40">
         {/* heading */}
         <h1 className="pb-8 mx-auto text-3xl text-center text-white capitalize border-b-4 md:text-5xl font-jost border-b-yellow-500/50 w-fit">
