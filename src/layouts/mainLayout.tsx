@@ -9,7 +9,9 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       <main className="main">{children}</main>
       <Footer />
-      <ScrollTop />
+      <div className="hidden xl:block">
+        <ScrollTop />
+      </div>
     </div>
   );
 };

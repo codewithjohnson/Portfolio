@@ -17,7 +17,7 @@ const Hero = () => {
           <img
             src="../../../public/assets/hero.png"
             alt="hero"
-            className="w-[60%] mx-auto h-[60%] md:w-full md:h-full"
+            className="w-[60%] mx-auto h-[60%] md:w-full md:h-full hover:brightness-100 hover:animate-pulse"
           />
           <DiJavascript1
             title="JavaScript"

@@ -62,7 +62,7 @@ const Header = () => {
         <NavLink className={"hover:text-secondary py-3"} to="#about">
           about
         </NavLink>
-        <NavLink className={"py-3 hover:text-secondary"} to="#contact">
+        <NavLink className={"py-3 hover:text-secondary"} to="/#contact">
           Contact
         </NavLink>
         <NavLink
