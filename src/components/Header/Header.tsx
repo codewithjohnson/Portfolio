@@ -64,7 +64,11 @@ const Header = () => {
       ${isMenuOpen ? "w-full  top-[80px]" : "-top-[400px]"}
       `}
       >
-        <NavLink className={"py-3 hover:text-secondary"} to="#home" onClick={(e) => handleSmoothScroll(e, "#home")}>
+        <NavLink
+          className={"py-3 hover:text-secondary"}
+          to="#home"
+          onClick={(e) => handleSmoothScroll(e, "#home")}
+        >
           home
         </NavLink>
         <NavLink
@@ -88,14 +92,15 @@ const Header = () => {
         >
           Contact
         </NavLink>
-        <NavLink
+        <a
           className={
             " py-2 rounded-3xl px-5 border-2 border-secondary text-center"
           }
-          to=""
+          target="_blank"
+          href="https://drive.google.com/file/d/1t6QFZHgrwgBUaGVfbVgFQUiFzGJ2knrI/view?usp=drive_link"
         >
           dowload CV
-        </NavLink>
+        </a>
       </ul>
 
       <button

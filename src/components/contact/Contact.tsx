@@ -77,7 +77,7 @@ const Contact = () => {
                     name="name"
                     id="name"
                     placeholder="Enter your name"
-                    className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50"
+                    className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50 hover:border-blue-500/40"
                   />
                 </div>
 
@@ -91,7 +91,7 @@ const Contact = () => {
                     name="email"
                     id="email"
                     placeholder="Enter your Email"
-                    className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50"
+                    className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50 hover:border-blue-500/40"
                   />
                 </div>
               </div>
@@ -108,11 +108,11 @@ const Contact = () => {
                     name="phone"
                     id="phone"
                     placeholder="Enter your phone"
-                    className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50"
+                    className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50 hover:border-blue-500/40"
                   />
                 </div>
 
-                {/* email */}
+                {/* subject */}
                 <div className="flex flex-col w-full gap-2">
                   <label htmlFor="subject" className="text-base text-gray-200">
                     Subject
@@ -122,7 +122,7 @@ const Contact = () => {
                     name="subject"
                     id="subject"
                     placeholder="Enter your Subject"
-                    className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50"
+                    className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50 hover:border-blue-500/40"
                   />
                 </div>
               </div>
@@ -136,7 +136,7 @@ const Contact = () => {
                   name="message"
                   id="message"
                   placeholder="Enter your message"
-                  className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50"
+                  className="w-full px-3 py-5 rounded-xl text-base text-gray-200 bg-[#2B2D33] border-2 border-gray-600  focus:outline-none focus:border-secondary/50 hover:border-blue-500/40"
                 ></textarea>
               </div>
 
