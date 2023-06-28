@@ -4,6 +4,8 @@ import Hero from "./components/hero/Hero";
 import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 
+
+
 const App = () => {
   return (
     <>
@@ -13,6 +15,8 @@ const App = () => {
         <Skills />
         <Projects />
       </MainLayout>
+
+      
     </>
   );
 };

@@ -19,7 +19,7 @@ const HeroText = (props: Props) => {
 
       {/* description */}
       <p className="w-full py-3 text-lg font-medium text-center text-white capitalize font-openSans md:text-left">
-        a <span className="text-[#1FBE59] ">hardcore Javascript</span> developer
+        an <span className=" glow-animation">Agile Javascript</span> developer
         from <span className="text-[#F0C45C]">Nigeria.</span>
       </p>
 

@@ -1,13 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 
-// building a scroll to top element
+const ScrollTop = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-type Props = {}
+  useEffect(() => {
+    const calculateScrollProgress = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
+      setScrollProgress(progress);
+    };
 
-const ScrollTop = (props: Props) => {
+    const handleScroll = () => {
+      requestAnimationFrame(calculateScrollProgress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='fixed bottom-4 right-3'>scrollTop</div>
-  )
-}
+    <div
+      className="fixed w-[2px] h-4 bottom-10 right-10 bg-blue-500/40"
+      style={{ height: `${scrollProgress}%` }}
+    ></div>
+  );
+};
 
-export default ScrollTop
+export default ScrollTop;
