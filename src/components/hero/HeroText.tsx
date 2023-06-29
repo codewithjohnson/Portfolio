@@ -15,17 +15,17 @@ const HeroText = () => {
 
       {/* name */}
       <h1 className="w-full py-1 text-4xl font-medium text-center text-white md:text-left md:text-6xl">
-        Muyiwa Johnson
+        Muyiwa Johnson.
       </h1>
 
       {/* description */}
-      <p className="w-full py-3 text-sm text-center text-white capitalize md:text-lg font-openSans md:text-left">
+      <p className="w-full py-5 text-sm text-center text-white capitalize md:text-lg font-openSans md:text-left">
         an <span className=" glow-animation">Agile Javascript</span> developer
         from <span className="text-[#F0C45C]">Nigeria.</span>
       </p>
 
       {/* about me */}
-      <p className="py-5 text-center text-white md:pr-32 md:text-left">
+      <p className="py-5 text-center text-gray-300 md:pr-32 md:text-left font-openSans">
         I'm a software developer with a passion for building beautiful and
         functional user interfaces.
       </p>

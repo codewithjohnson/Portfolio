@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useLocation } from "react-router-dom";
-import { useInView } from "framer-motion";
+
 import Logo from "../logo/Logo";
 import { NavLink } from "react-router-dom";
 import { handleSmoothScroll } from "../hero/funcs";
@@ -8,14 +7,7 @@ import { handleSmoothScroll } from "../hero/funcs";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isCurrentRoute, setIsCurrentRoute] = useState({
-    home: false,
-    projects: false,
-    about: false,
-    contact: false,
-  });
 
-  const location = useLocation();
   const menuRef = useRef<HTMLUListElement>(null);
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -49,7 +41,7 @@ const Header = () => {
   return (
     <nav
       className={`z-50 bg-primary transition-all duration-200 delay-200 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-8  xl:px-40
-      ${isScrolled ? "bg-[#2B2D33]/80" : "bg-primary"}
+      ${isScrolled ? "bg-[#2B2D33]/60" : "bg-primary"}
        `}
     >
       <Logo />
