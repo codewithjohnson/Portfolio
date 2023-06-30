@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
 import { handleSmoothScroll } from "./funcs";
 
-
-
 const HeroText = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full px-6 pt-5 md:pt-0 md:px-0">
@@ -43,19 +41,27 @@ const HeroText = () => {
         {/* social links */}
         <div className="flex flex-row items-center justify-between gap-5">
           {/* twitter */}
-          <Link to="#" className="text-white">
+          <a
+            target="_blank"
+            href="https://twitter.com/MuyiwaMighty"
+            className="text-white"
+          >
             <BsTwitter className="w-5 h-5 text-white" />
-          </Link>
+          </a>
 
           {/* linkedin */}
-          <Link to="#" className="text-white">
+          {/* <Link to="#" className="text-white">
             <BsGithub className="w-5 h-5 text-white" />
-          </Link>
+          </Link> */}
 
           {/* github */}
-          <Link to="#" className="text-white">
+          <a
+            target="_blank"
+            href="https://github.com/codewithjohnson"
+            className="text-white"
+          >
             <BsLinkedin className="w-5 h-5 text-white" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

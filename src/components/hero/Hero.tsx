@@ -22,14 +22,14 @@ const Hero = () => {
           />
           <DiJavascript1
             title="JavaScript"
-            className="absolute bg-black rounded-lg h-9 w-9 text-secondary right-[30px] sm:right-20 md:h-10 md:w-10 md:right-[200px] lg:right-[70px] xl:right-[200px] 2xl:right-[250px] top-28 hidden md:block xl:animated-bounce"
+            className="absolute bg-black rounded-lg h-7 w-7 text-secondary right-[30px] sm:right-20 md:h-8 md:w-8 md:right-[200px] lg:right-[70px] xl:right-[200px] 2xl:right-[250px] top-28 hidden md:block xl:animated-bounce"
           />
           <SiTypescript
-            className="absolute rounded-lg h-9 w-9 text-secondary right-[300px] sm:right-[550px] md:h-10 md:w-10 md:right-[450px] xl:right-[550px] 2xl:right-[650px] top-28 hidden md:block xl:animated-bounce"
+            className="absolute rounded-lg h-7 w-7 text-secondary right-[300px] sm:right-[550px] md:h-8 md:w-8 md:right-[450px] xl:right-[550px] 2xl:right-[650px] top-28 hidden md:block xl:animated-bounce"
             title="Typescript"
           />
           <GrReactjs
-            className="absolute rounded-lg h-9 w-9 text-green-500 right-[300px] sm:right-[550px] md:h-10 md:w-10 md:right-[450px] xl:right-[550px] 2xl:right-[650px] top-[300px] hidden md:block xl:animated-bounce"
+            className="absolute rounded-lg h-7 w-7 text-green-500 right-[300px] sm:right-[550px] md:h-8 md:w-8 md:right-[450px] xl:right-[550px] 2xl:right-[650px] top-[300px] hidden md:block xl:animated-bounce"
             title="React"
           />
         </div>

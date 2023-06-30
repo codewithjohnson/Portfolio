@@ -11,6 +11,7 @@ const Projects = () => {
 
   return (
     <div
+      id="projects"
       ref={projectRef}
       className="py-16 bg-black/40 "
       style={{
@@ -41,6 +42,7 @@ const Projects = () => {
             image={items.image}
             alt={items.alt}
             stacks={items.stacks}
+            blur={items.blur}
           />
         ))}
       </div>

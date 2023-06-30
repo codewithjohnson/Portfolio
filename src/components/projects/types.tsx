@@ -8,4 +8,5 @@ export interface ProjectType {
   image: string;
   alt: string;
   stacks: string;
+  blur?: boolean;
 }
