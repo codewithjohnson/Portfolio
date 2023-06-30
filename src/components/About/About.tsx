@@ -13,9 +13,9 @@ const About = () => {
       id="about"
       className="w-full bg-[#2B2D33]"
       style={{
-        transform: isInView ? "none" : "translateY(100px)",
+        transform: isInView ? "none" : "translateY(50px)",
         opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        transition: "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
     >
       <div className="flex flex-col justify-between w-full gap-10 px-5 py-16 md:py-20 xl:px-40 md:flex-row">

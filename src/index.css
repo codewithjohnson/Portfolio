@@ -55,8 +55,4 @@
         0 0 40px #1fbe59, 0 0 50px #1fbe59, 0 0 60px #1fbe59, 0 0 70px #1fbe59;
     }
   }
-
-  .glow-animation {
-    animation: glow 2s ease-in-out infinite;
-  }
 }

@@ -15,9 +15,9 @@ const Contact = () => {
       id="contact"
       className="w-full bg-[#2B2D33]"
       style={{
-        transform: isInView ? "none" : "translateY(150px)",
+        transform: isInView ? "none" : "translateY(50px)",
         opacity: isInView ? 1 : 0,
-        transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        transition: "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
     >
       <div className="w-full py-16 px-7 xl:px-40">

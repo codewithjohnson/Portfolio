@@ -41,15 +41,15 @@ const Header = () => {
   return (
     <nav
       className={`z-50 bg-primary transition-all duration-200 delay-200 ease-in-out header h-[80px] fixed top-0 w-full md:flex-row flex justify-between left-0 right-0 items-center px-8  xl:px-40
-      ${isScrolled ? "bg-[#2B2D33]/60" : "bg-primary"}
+      ${isScrolled ? "bg-[#2B2D33]/50" : "bg-primary"}
        `}
     >
       <Logo />
 
       <ul
         ref={menuRef}
-        className={`fixed left-0 right-0  w-full md:static md:top-0 flex-col text-sm flex md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans 
-      ${isMenuOpen ? " bg-primary/80 top-[80px]  px-8 " : "hidden md:flex"}`}
+        className={`fixed left-0 right-0  w-full md:static md:top-0 flex-col text-sm flex md:flex-row md:justify-between md:items-center gap-10 md:gap-1 text-white font-semibold capitalize font-openSans z-50
+      ${isMenuOpen ? " bg-primary/80 top-[80px] px-8 " : "hidden md:flex"}`}
       >
         <NavLink
           className={
